@@ -55,7 +55,7 @@ export default function Home() {
           setMintMessage(`Congrats, you minted ${mintQuantity} token(s)!`)
           setMintError(false)
       } catch {
-        setMintMessage('Connect your wallet first.');
+        setMintMessage('Connect wallet, You can Mint only once, up to 5 NFTS');
         setMintError(true)
       }
     } catch(error) {
