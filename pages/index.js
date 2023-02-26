@@ -9,8 +9,8 @@ import YourNFTs from '../components/YourNFTs'
 
 export default function Home() {
   // Constants
-  const MINT_PRICE = 0.03;
-  const MAX_MINT = 10;
+  const MINT_PRICE = 0.01;
+  const MAX_MINT = 5;
 
   // UI state
   const [mintQuantity, setMintQuantity] = useState(1)
@@ -29,7 +29,7 @@ export default function Home() {
       return
     }
     if ( mintQuantity > MAX_MINT ) {
-      setMintMessage('You can only mint a maximum of 10 NFTs.')
+      setMintMessage('You can only mint a maximum of 5 NFTs.')
       setMintError(true)
       mintQuantityInputRef.current.focus()
       return
@@ -119,14 +119,6 @@ export default function Home() {
       </main>
 
       <footer className="mt-20 text-center">
-        <a
-          href="https://github.com/tomhirst/solidity-nextjs-mint-starter/blob/main/README.md"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 hover:text-blue-700 mb-8 inline-block"
-        >
-          Read the docs
-        </a>
       </footer>
     </div>
   )

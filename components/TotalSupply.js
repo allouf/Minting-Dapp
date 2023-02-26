@@ -10,7 +10,7 @@ export default function TotalSupply() {
     const [totalValue, setTotalValue] = useState(0)
 
     // Constants
-    const TOTAL = 10000;
+    const TOTAL = 100;
 
     useEffect( function() {
         async function fetchTotals() {

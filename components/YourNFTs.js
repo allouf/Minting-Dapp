@@ -29,7 +29,7 @@ export default function YourNFTs() {
 
             for(let i = 0; i < tokensOwned; i++) {
                 const tokenId = await contract.tokenOfOwnerByIndex(address, i)
-                tokenIds.push(tokenId.toString())
+                tokenIds.push("https://gateway.pinata.cloud/ipfs/QmbhYwjZbN5odswEjfoBpKknFMz98KGG2s5NsVQjbzx4Ux/"+tokenId.toString()+".png")
             }
   
             setNfts(tokenIds)
@@ -44,7 +44,7 @@ export default function YourNFTs() {
         <>
             <h2 className="text-2xl font-semibold mb-2">Your NFTs</h2>
             <ul className="grid grid-cols-4 gap-6">
-                { nfts.map( (nft) => <div key={nft} className="bg-gray-100 p-4 h-24 lg:h-28 flex justify-center items-center text-lg">{nft}</div>)}
+                { nfts.map( (nft) => <div key={nft} className="bg-gray-100 p-4 h-24 lg:h-28 flex justify-center items-center text-lg"><img src={nft}></img></div>)}
             </ul>
         </>
     )

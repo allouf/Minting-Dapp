@@ -13,10 +13,6 @@ This repo contains boilerplate code for minting NFTs from the client-side using 
 
 ## Getting Started
 
-### Clone This Repo
-
-Use `git clone https://github.com/tomhirst/nft-minting-dapp-starter.git` to get the files within this repository onto your local machine.
-
 ### Environment Setup
 
 Duplicate `.env.example` to `.env` and fill out the `HARDHAT_CHAIN_ID` environment variable. The port from the example file, if it's free, will be fine in most cases.
@@ -93,19 +89,3 @@ To lint your front-end code, use `npm run lint`.
 To test the smart contract, run `npx hardhat test`.
 
 Basic tests can be found in `test/Minter.test.js`.
-
-## Roadmap
-
-- Show the funds available in the connected account's wallet
-- Add common owner functionality to the contract
-    - Reserve tokens
-    - Flip sale state
-    - Set starting index
-    - Set base URI for asset metadata
-    - Set provenance hash
-    - Withdraw funds
-- Attach image data to minted tokens with IPFS
-- Deploy to the Ropsten test network
-- Introduce code style rules and linting
-- Write more extensive tests
-- Create a TypeScript fork

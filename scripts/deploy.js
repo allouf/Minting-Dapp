@@ -2,7 +2,8 @@ const hre = require("hardhat");
 
 async function main() {
   const Minter = await hre.ethers.getContractFactory("Minter");
-  const minter = await Minter.deploy();
+  const minter = await Minter.deploy("ipfs/QmbgmT7ZEeFiJuzaCf1zQyHAK5AC4zcPKUoNUwNiMEhwYu/");
+  //const minter = await Minter.deploy();
   await minter.deployed();
   console.log("Minter deployed to:", minter.address);
 }
